@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAF8F5;color:#1E1B18;font-family:'Figtree',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#B3261E;text-decoration:none}a:hover{color:#8E1C16}
+*{box-sizing:border-box}
+input,select,textarea{font:inherit}
+</style>
+</helmet>
+<div style="width:100%;overflow:hidden">
+<dc-import name="SiteHeader" active="contact" solid="{{ true }}" hint-size="100%,0px"></dc-import>
+
+<section data-screen-label="Contact" style="padding:clamp(120px,13vw,170px) 6% 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:64px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:32px">
+    <div>
+      <div style="font-size:12px;letter-spacing:0.2em;color:#B3261E;font-weight:600;margin-bottom:18px">GET IN TOUCH TODAY</div>
+      <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-0.02em;margin:0 0 22px">Let’s turn your home ownership <span style="color:#B3261E;font-style:italic">dream into reality.</span></h1>
+      <p style="font-size:17px;line-height:1.65;color:#3A3530;margin:0;max-width:480px">Book a free, no-obligation consultation, online or in-person.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;padding-top:28px;border-top:1px solid #E4DED6;font-size:16px;color:#3A3530">
+      <div><div style="font-family:'Newsreader',serif;font-size:24px;color:#1E1B18">Bernardine Harrison</div><div style="font-size:14px;color:#B3261E;font-weight:500;margin-top:4px">Mortgage Broker</div></div>
+      <a href="tel:+61406881477" style="display:flex;gap:14px;align-items:center;color:#3A3530" style-hover="color:#B3261E"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="flex:none"><path d="M4 2 H7.5 L9 6.5 L6.8 8 C7.8 10.2 9.8 12.2 12 13.2 L13.5 11 L18 12.5 V16 C18 17 17 18 16 18 C8.3 18 2 11.7 2 4 C2 3 3 2 4 2 Z"></path></svg>0406 881 477</a>
+      <a href="mailto:bernardine@mightyfinance.com.au" style="display:flex;gap:14px;align-items:center;color:#3A3530;overflow-wrap:anywhere" style-hover="color:#B3261E"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" style="flex:none"><rect x="2" y="4" width="16" height="12"></rect><path d="M2 5 L10 11 L18 5"></path></svg>bernardine@mightyfinance.com.au</a>
+      <div style="display:flex;gap:14px;align-items:center"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#3A3530" stroke-width="1.4" style="flex:none"><path d="M10 18 C10 18 4 12 4 8 A6 6 0 0 1 16 8 C16 12 10 18 10 18 Z"></path><circle cx="10" cy="8" r="2"></circle></svg>6 Kilda Road, Melbourne VIC, Australia</div>
+    </div>
+  </div>
+
+  <form onSubmit="{{ submit }}" style="background:#F4EFE8;border:1px solid #E4DED6;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px">
+      <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#3A3530">Full name<input type="text" required="{{ true }}" style="height:52px;padding:0 16px;border:1px solid #D6CCBF;background:#FAF8F5;border-radius:2px;font-size:16px;color:#1E1B18;outline:none" style-focus="border-color:#B3261E"></label>
+      <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#3A3530">Phone<input type="tel" style="height:52px;padding:0 16px;border:1px solid #D6CCBF;background:#FAF8F5;border-radius:2px;font-size:16px;color:#1E1B18;outline:none" style-focus="border-color:#B3261E"></label>
+    </div>
+    <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#3A3530">Email<input type="email" required="{{ true }}" style="height:52px;padding:0 16px;border:1px solid #D6CCBF;background:#FAF8F5;border-radius:2px;font-size:16px;color:#1E1B18;outline:none" style-focus="border-color:#B3261E"></label>
+    <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#3A3530">I’m interested in
+      <select style="height:52px;padding:0 14px;border:1px solid #D6CCBF;background:#FAF8F5;border-radius:2px;font-size:16px;color:#1E1B18;outline:none" style-focus="border-color:#B3261E">
+        <option>First Home Buyer</option>
+        <option>Refinance</option>
+        <option>Debt Consolidation</option>
+        <option>Home Renovations</option>
+        <option>Investment Property Portfolio</option>
+        <option>Something else</option>
+      </select>
+    </label>
+    <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;color:#3A3530">Message<textarea rows="5" style="padding:14px 16px;border:1px solid #D6CCBF;background:#FAF8F5;border-radius:2px;font-size:16px;color:#1E1B18;outline:none;resize:vertical" style-focus="border-color:#B3261E"></textarea></label>
+    <button type="submit" style="min-height:56px;display:flex;align-items:center;justify-content:center;gap:12px;background:#B3261E;color:#fff;border:none;border-radius:2px;font-size:16px;font-weight:500;cursor:pointer" style-hover="background:#8E1C16">Request a Free Consultation <span>→</span></button>
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="font-size:15px;color:#1E1B18;padding:14px 16px;background:#FAF8F5;border:1px solid #D6CCBF">Thank you. We’ll be in touch shortly.</div>
+    </sc-if>
+  </form>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      submit: e => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

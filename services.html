@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAF8F5;color:#1E1B18;font-family:'Figtree',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+a{color:#B3261E;text-decoration:none}a:hover{color:#8E1C16}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="width:100%;overflow:hidden">
+<dc-import name="SiteHeader" active="services" solid="{{ true }}" hint-size="100%,0px"></dc-import>
+
+<header data-screen-label="Services hero" style="padding:clamp(120px,13vw,170px) 6% 72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:end;border-bottom:1px solid #E4DED6">
+  <div>
+    <div style="font-size:12px;letter-spacing:0.2em;color:#B3261E;font-weight:600;margin-bottom:18px">OUR SERVICES</div>
+    <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(44px,5.4vw,78px);line-height:1;letter-spacing:-0.02em;margin:0">We can help<br><span style="color:#B3261E;font-style:italic">you with.</span></h1>
+  </div>
+  <p style="font-size:17px;line-height:1.65;color:#3A3530;margin:0;max-width:540px;text-wrap:pretty">At <strong style="color:#B3261E;font-weight:600">Mighty Finance</strong>, we understand that buying a home is one of the biggest decisions you’ll ever make. That’s why we take the time to understand your goals, guide you through the process, and help you secure a loan solution tailored to your needs.</p>
+</header>
+
+<div style="margin:0 6%;aspect-ratio:21/8;min-height:260px;position:relative;margin-top:56px"><img src="uploads/photos/family-sofa.webp" alt="Family relaxing at home" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%;display:block"></div>
+
+<section data-screen-label="Service list" style="padding:0 6%">
+  <sc-for list="{{ services }}" as="s" hint-placeholder-count="5">
+    <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 64px;padding:64px 0;border-bottom:1px solid #E4DED6">
+      <div style="display:flex;gap:24px;align-items:flex-start">
+        <div style="font-family:'Newsreader',serif;font-size:30px;color:#B3261E;line-height:1;padding-top:6px">{{ s.n }}</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.2vw,46px);line-height:1.08;letter-spacing:-0.015em;margin:0">{{ s.title }}</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:560px">
+        <p style="font-size:17px;line-height:1.65;color:#3A3530;margin:0;text-wrap:pretty">{{ s.body }}</p>
+        <a href="contact.html" style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500">Talk to us about {{ s.short }} <span>→</span></a>
+      </div>
+    </article>
+  </sc-for>
+</section>
+
+<section data-screen-label="Services CTA" style="margin:88px 6%;padding:64px 6%;background:#2F2B24;color:#F4EFE8;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px">
+  <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.2vw,46px);line-height:1.08;letter-spacing:-0.015em;margin:0;max-width:620px">Let’s turn your home ownership <span style="font-style:italic;color:#F0B7A8">dream into reality.</span></h2>
+  <a href="contact.html" style="display:flex;align-items:center;gap:12px;background:#B3261E;color:#fff;padding:17px 28px;border-radius:2px;font-size:16px;font-weight:500" style-hover="background:#8E1C16;color:#fff">Get a Free Consultation <span>→</span></a>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { n: '01', title: 'First Home Buyer', short: 'buying your first home', body: 'Buying your first home can feel overwhelming. We explain how much you may be able to borrow, which government schemes or grants may apply, and guide you from pre-approval through to settlement.' },
+        { n: '02', title: 'Refinance', short: 'refinancing', body: 'If your current loan no longer suits you, we compare options across a wide range of lenders to help you find a better rate, access equity or change your loan features.' },
+        { n: '03', title: 'Debt Consolidation', short: 'debt consolidation', body: 'Bring multiple debts, such as credit cards and personal loans, together into one manageable repayment, structured around your home loan where it makes sense.' },
+        { n: '04', title: 'Home Renovations', short: 'renovation finance', body: 'Whether you are extending, updating or rebuilding, we help you explore ways to fund your renovation, including using the equity in your existing home.' },
+        { n: '05', title: 'Investment Property Portfolio', short: 'investment loans', body: 'From your first investment property to a growing portfolio, we help structure loans that support your long-term property goals.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:{{ headerPad }};background:{{ headerBg }};box-shadow:{{ headerShadow }};backdrop-filter:{{ headerBlur }};-webkit-backdrop-filter:{{ headerBlur }};transition:padding .3s ease,background .3s ease,box-shadow .3s ease;font-family:'Figtree',Helvetica,Arial,sans-serif">
+  <a href="index.html" style="display:flex;align-items:center"><img src="{{ logoSrc }}" alt="Mighty Finance Mortgage Broker" style="height:{{ logoH }};width:auto;display:block;mix-blend-mode:multiply;transition:height .3s ease"></a>
+  <sc-if value="{{ showDesktopNav }}" hint-placeholder-val="{{ true }}">
+    <nav style="display:flex;align-items:center;gap:40px;font-size:14px">
+      <a href="index.html" style="color:#1E1B18;padding:8px 0;border-bottom:2px solid {{ uHome }}" style-hover="color:#B3261E">Home</a>
+      <div onMouseEnter="{{ openDrop }}" onMouseLeave="{{ closeDrop }}" style="position:relative">
+        <a href="services.html" style="display:flex;align-items:center;gap:6px;color:#1E1B18;padding:8px 0;border-bottom:2px solid {{ uServices }}" style-hover="color:#B3261E">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3.5 L5 6.5 L8 3.5"></path></svg></a>
+        <sc-if value="{{ dropOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:100%;left:-18px;padding-top:14px">
+            <div style="min-width:270px;background:#FAF8F5;border:1px solid #E4DED6;box-shadow:0 14px 36px rgba(30,27,24,0.12);padding:8px;display:flex;flex-direction:column">
+              <sc-for list="{{ services }}" as="s" hint-placeholder-count="5">
+                <a href="{{ s.href }}" style="padding:12px 14px;color:#1E1B18;font-size:14px" style-hover="background:#F4EFE8;color:#B3261E">{{ s.label }}</a>
+              </sc-for>
+              <a href="services.html" style="margin-top:4px;padding:12px 14px;border-top:1px solid #E4DED6;color:#B3261E;font-size:13px;font-weight:600">All services →</a>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <a href="about.html" style="color:#1E1B18;padding:8px 0;border-bottom:2px solid {{ uAbout }}" style-hover="color:#B3261E">About</a>
+      <a href="contact.html" style="color:#1E1B18;padding:8px 0;border-bottom:2px solid {{ uContact }}" style-hover="color:#B3261E">Contact</a>
+    </nav>
+    <a href="contact.html" style="display:flex;align-items:center;gap:10px;background:#B3261E;color:#fff;padding:13px 22px;border-radius:2px;font-size:14px;font-weight:500" style-hover="background:#8E1C16;color:#fff">Get a Free Consultation <span>→</span></a>
+  </sc-if>
+  <sc-if value="{{ showHamburger }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Menu" style="width:48px;height:48px;border:1px solid #D6CCBF;background:#FAF8F5;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0">
+      <span style="width:20px;height:1.5px;background:#1E1B18;transition:transform .25s ease;transform:{{ bar1 }}"></span>
+      <span style="width:20px;height:1.5px;background:#1E1B18;transition:opacity .2s ease;opacity:{{ bar2 }}"></span>
+      <span style="width:20px;height:1.5px;background:#1E1B18;transition:transform .25s ease;transform:{{ bar3 }}"></span>
+    </button>
+  </sc-if>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;top:{{ menuTop }};left:0;right:0;bottom:0;z-index:49;background:#FAF8F5;padding:24px 6% 120px;display:flex;flex-direction:column;overflow-y:auto;border-top:1px solid #E4DED6;font-family:'Figtree',Helvetica,Arial,sans-serif">
+    <a href="index.html" style="font-family:'Newsreader',serif;font-size:30px;color:#1E1B18;padding:12px 0;border-bottom:1px solid #E4DED6">Home</a>
+    <a href="services.html" style="font-family:'Newsreader',serif;font-size:30px;color:#1E1B18;padding:12px 0 8px">Services</a>
+    <div style="display:flex;flex-direction:column;padding:0 0 12px 16px;border-bottom:1px solid #E4DED6">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="5">
+        <a href="{{ s.href }}" onClick="{{ closeMenu }}" style="font-size:16px;color:#3A3530;padding:10px 0;min-height:44px;display:flex;align-items:center">{{ s.label }}</a>
+      </sc-for>
+    </div>
+    <a href="about.html" style="font-family:'Newsreader',serif;font-size:30px;color:#1E1B18;padding:12px 0;border-bottom:1px solid #E4DED6">About</a>
+    <a href="contact.html" style="font-family:'Newsreader',serif;font-size:30px;color:#1E1B18;padding:12px 0;border-bottom:1px solid #E4DED6">Contact</a>
+    <a href="contact.html" style="margin-top:28px;display:flex;align-items:center;justify-content:center;gap:12px;background:#B3261E;color:#fff;min-height:54px;border-radius:2px;font-size:16px;font-weight:500">Get a Free Consultation <span>→</span></a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:420},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;solid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280, y: 0, menu: false, drop: false };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth, menu: window.innerWidth < 1024 && this.state.menu });
+    this.onScroll = () => this.setState({ y: window.scrollY });
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onResize(); this.onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+  }
+  renderVals() {
+    const { w, y, menu, drop } = this.state;
+    const active = this.props.active ?? 'home';
+    const mobile = w < 768, compactNav = w < 1024, scrolled = y > 40;
+    const solid = scrolled || w < 900 || menu || this.props.solid;
+    const u = k => (active === k ? '#B3261E' : 'transparent');
+    return {
+      showDesktopNav: !compactNav, showHamburger: compactNav, menuOpen: menu && compactNav, dropOpen: drop,
+      openDrop: () => this.setState({ drop: true }), closeDrop: () => this.setState({ drop: false }),
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })), closeMenu: () => this.setState({ menu: false }),
+      uHome: u('home'), uServices: u('services'), uAbout: u('about'), uContact: u('contact'),
+      headerPad: scrolled ? '12px 6%' : (mobile ? '14px 5%' : '24px 6%'),
+      logoSrc: (window.__resources && window.__resources.logo) || 'uploads/mighty_finance_logo.png',
+      headerBlur: solid ? 'blur(10px)' : 'none',
+      headerBg: solid ? 'rgba(250,248,245,0.96)' : 'rgba(250,248,245,0)',
+      headerShadow: scrolled && !menu ? '0 4px 24px rgba(30,27,24,0.08)' : 'none',
+      logoH: scrolled ? (mobile ? '40px' : '48px') : (mobile ? '46px' : '64px'),
+      menuTop: scrolled ? (mobile ? '64px' : '72px') : (mobile ? '74px' : '112px'),
+      bar1: menu ? 'translateY(6.5px) rotate(45deg)' : 'none',
+      bar2: menu ? 0 : 1,
+      bar3: menu ? 'translateY(-6.5px) rotate(-45deg)' : 'none',
+      services: [
+        { label: 'First Home Buyer', href: 'first-home-buyer.html' },
+        { label: 'Refinance', href: '#' },
+        { label: 'Debt Consolidation', href: '#' },
+        { label: 'Home Renovations', href: '#' },
+        { label: 'Investment Property Portfolio', href: '#' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

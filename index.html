@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="uploads/mighty_finance_logo.png" data-resource-id="logo" />
+<template id="__bundler_thumbnail" data-bg-color="#FAF8F5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#FAF8F5"/><path d="M30 50 L50 32 L70 50 V70 H30 Z" fill="none" stroke="#B3261E" stroke-width="4" stroke-linejoin="round"/><rect x="45" y="52" width="10" height="10" fill="#B3261E"/></svg></template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAF8F5;color:#1E1B18;font-family:'Figtree',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+a{color:#B3261E;text-decoration:none}a:hover{color:#8E1C16}
+*{box-sizing:border-box}
+</style>
+</helmet>
+
+<div style="width:100%;overflow:hidden">
+
+<dc-import name="SiteHeader" active="home" hint-size="100%,0px"></dc-import>
+
+<!-- HERO -->
+<header data-screen-label="Hero" style="position:relative;min-height:{{ heroMinH }};padding-top:{{ heroPadTop }};background:#FAF8F5;overflow:hidden">
+  <div style="position:{{ heroImgPos }};top:0;right:0;bottom:0;width:{{ heroImgW }};height:{{ heroImgH }}">
+    <img src="uploads/photos/home-hero.webp" alt="Family standing outside their home" style="width:100%;height:100%;object-fit:cover;object-position:58% 40%;display:block">
+    <div style="position:absolute;inset:0;background:{{ heroGrad }}"></div>
+    <div style="position:absolute;right:{{ tagInset }};bottom:{{ tagInset }};display:flex;align-items:center;gap:20px;color:#fff">
+      <div style="font-family:'Newsreader',serif;font-style:italic;font-size:{{ tagSize }};line-height:1.3;text-shadow:0 1px 12px rgba(0,0,0,0.35)">Different goals.<br>A brighter tomorrow.</div>
+      <div style="width:56px;height:1px;background:#fff"></div>
+    </div>
+  </div>
+
+
+  <div style="position:relative;z-index:2;padding:{{ heroContentPad }};max-width:720px">
+    <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(46px,5.6vw,82px);line-height:1;letter-spacing:-0.02em;margin:0 0 32px">Your dream home<br>starts with the right<br><span style="color:#B3261E;font-style:italic">Mortgage Broker</span></h1>
+    <p style="font-size:18px;line-height:1.6;color:#3A3530;max-width:470px;margin:0 0 40px;text-wrap:pretty">There’s nothing more rewarding than helping families move from renting to owning their very own home.</p>
+    <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap">
+      <a href="contact.html" style="display:flex;align-items:center;gap:12px;background:#B3261E;color:#fff;padding:17px 28px;border-radius:2px;font-size:16px;font-weight:500" style-hover="background:#8E1C16;color:#fff">Get a Free Consultation <span>→</span></a>
+      <a href="#process" style="display:flex;align-items:center;gap:12px;color:#1E1B18;font-size:15px">
+        <span style="width:30px;height:30px;border:1.5px solid #1E1B18;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px">▶</span>
+        <span style="border-bottom:1px solid #1E1B18;padding-bottom:2px">See How It Works</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services" data-screen-label="Services" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));background:#FAF8F5">
+  <div style="min-height:520px;position:relative">
+    <img src="uploads/photos/family-boxes.webp" alt="Family unpacking in their new home" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;display:block">
+  </div>
+  <div style="padding:72px 7% 72px 6%;display:flex;flex-direction:column;justify-content:center">
+    <div style="font-size:12px;letter-spacing:0.2em;color:#B3261E;font-weight:600;margin-bottom:18px">OUR SERVICES</div>
+    <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,3.8vw,54px);line-height:1.05;letter-spacing:-0.015em;margin:0 0 22px">We can help<br>you with.</h2>
+    <p style="font-size:17px;line-height:1.6;color:#3A3530;margin:0 0 44px;max-width:540px;text-wrap:pretty">At <strong style="color:#B3261E;font-weight:600">Mighty Finance</strong>, we understand that buying a home is one of the biggest decisions you’ll ever make. That’s why we take the time to understand your goals, guide you through the process, and help you secure a loan solution tailored to your needs.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));row-gap:28px;margin-bottom:40px">
+      <div style="padding:0 16px 0 0;border-right:1px solid #E4DED6;margin-right:16px">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#B3261E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M4 15 L17 4 L30 15 V30 H4 Z"></path><path d="M13 30 V21 H21 V30"></path></svg>
+        <div style="font-size:15px;line-height:1.35;margin-top:18px">First Home<br>Buyer</div>
+      </div>
+      <div style="padding:0 16px 0 0;border-right:1px solid #E4DED6;margin-right:16px">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#B3261E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M28 13 A12 12 0 0 0 6 11 M6 4 V11 H13"></path><path d="M6 21 A12 12 0 0 0 28 23 M28 30 V23 H21"></path></svg>
+        <div style="font-size:15px;line-height:1.35;margin-top:18px">Refinance</div>
+      </div>
+      <div style="padding:0 16px 0 0;border-right:1px solid #E4DED6;margin-right:16px">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#B3261E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="8" width="28" height="19" rx="1"></rect><path d="M3 14 H31 M8 21 H14"></path></svg>
+        <div style="font-size:15px;line-height:1.35;margin-top:18px">Debt<br>Consolidation</div>
+      </div>
+      <div style="padding:0 16px 0 0;border-right:1px solid #E4DED6;margin-right:16px">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#B3261E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 28 L18 16"></path><path d="M15 9 L21 3 L31 13 L25 19 Z"></path><path d="M18 12 L22 16"></path></svg>
+        <div style="font-size:15px;line-height:1.35;margin-top:18px">Home<br>Renovations</div>
+      </div>
+      <div style="padding:0 16px 0 0;border-right:1px solid #E4DED6;margin-right:16px">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#B3261E" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 30 H31"></path><rect x="6" y="20" width="5" height="10"></rect><rect x="15" y="14" width="5" height="16"></rect><rect x="24" y="6" width="5" height="24"></rect></svg>
+        <div style="font-size:15px;line-height:1.35;margin-top:18px">Investment Property<br>Portfolio</div>
+      </div>
+    </div>
+    <a href="services.html" style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500">Explore Our Services <span>→</span></a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="about" data-screen-label="Why us" style="display:flex;flex-wrap:wrap;background:#2F2B24;color:#F4EFE8">
+  <div style="min-height:440px;position:relative;flex:1 1 380px">
+    <img src="uploads/photos/melbourne.webp" alt="Melbourne skyline" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 55%;display:block">
+  </div>
+  <div style="padding:72px 7% 64px 6%;display:flex;flex-direction:column;justify-content:center;gap:56px;flex:2 1 560px;min-width:0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.2em;font-weight:600;margin-bottom:18px;color:#D9D0C4">WHY CHOOSE MIGHTY FINANCE?</div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,3.8vw,54px);line-height:1.05;letter-spacing:-0.015em;margin:0">Clear advice.<br>Real options.</h2>
+      </div>
+      <div style="padding-top:8px">
+        <p style="font-size:17px;line-height:1.6;margin:0 0 22px;color:#E6DFD5;text-wrap:pretty">We take the time to understand your situation, explain your options in simple terms and work with a wide panel of lenders to help you make confident decisions.</p>
+        <a href="about.html" style="display:inline-flex;align-items:center;gap:12px;color:#F4EFE8;font-size:15px"><span style="border-bottom:1px solid #F4EFE8;padding-bottom:2px">Why Work With Us</span> <span>→</span></a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));row-gap:24px">
+      <div style="display:flex;align-items:center;gap:14px;padding-right:16px;margin-right:16px;border-right:1px solid rgba(244,239,232,0.2)">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#F4EFE8" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" style="flex:none"><circle cx="12" cy="11" r="5"></circle><path d="M3 27 C3 21 7 18 12 18 C17 18 21 21 21 27"></path><circle cx="22" cy="9" r="4"></circle><path d="M22 16 C26 16 29 19 29 24"></path></svg>
+        <div style="font-size:14px;line-height:1.4">Personalised<br>Service</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding-right:16px;margin-right:16px;border-right:1px solid rgba(244,239,232,0.2)">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#F4EFE8" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" style="flex:none"><path d="M3 8 H29 M3 16 H29 M3 24 H29"></path><circle cx="10" cy="8" r="3" fill="#2F2B24"></circle><circle cx="22" cy="16" r="3" fill="#2F2B24"></circle><circle cx="13" cy="24" r="3" fill="#2F2B24"></circle></svg>
+        <div style="font-size:14px;line-height:1.4">Wide Range<br>of Lenders</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding-right:16px;margin-right:16px;border-right:1px solid rgba(244,239,232,0.2)">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#F4EFE8" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" style="flex:none"><path d="M11 21 C8 19 7 16 7 13 A9 9 0 0 1 25 13 C25 16 24 19 21 21 V24 H11 Z"></path><path d="M12 28 H20"></path></svg>
+        <div style="font-size:14px;line-height:1.4">Expert Mortgage<br>Advice</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding-right:16px;margin-right:16px;border-right:1px solid rgba(244,239,232,0.2)">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#F4EFE8" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" style="flex:none"><circle cx="16" cy="18" r="11"></circle><path d="M16 12 V18 L20 21 M13 3 H19"></path></svg>
+        <div style="font-size:14px;line-height:1.4">Fast &amp; Transparent<br>Process</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding-right:16px;margin-right:16px;border-right:1px solid rgba(244,239,232,0.2)">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#F4EFE8" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" style="flex:none"><path d="M16 3 L27 7 V15 C27 22 22 27 16 29 C10 27 5 22 5 15 V7 Z"></path><path d="M11 16 L15 20 L22 12"></path></svg>
+        <div style="font-size:14px;line-height:1.4">Support Every<br>Step of the Way</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" data-screen-label="Process" style="padding:80px 6% 88px;background:#FAF8F5">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px;align-items:end;margin-bottom:64px">
+    <div>
+      <div style="font-size:12px;letter-spacing:0.2em;color:#B3261E;font-weight:600;margin-bottom:18px">HOW IT WORKS</div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,3.8vw,54px);line-height:1.05;letter-spacing:-0.015em;margin:0">A straightforward<br>process, from start to finish.</h2>
+    </div>
+    <div style="justify-self:end;max-width:420px">
+      <p style="font-size:16px;line-height:1.6;color:#3A3530;margin:0 0 18px">We make the home loan journey simple, with expert guidance at every step.</p>
+      <a href="#" style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500">Learn More About Our Process <span>→</span></a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));row-gap:40px">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+      <div style="display:flex;gap:22px;padding-right:28px;margin-right:28px;border-right:{{ stepDivider }}">
+        <div>
+          <div style="width:28px;height:1.5px;background:#B3261E;margin-bottom:12px"></div>
+          <div style="font-family:'Newsreader',serif;font-size:30px;color:#B3261E;line-height:1">{{ s.n }}</div>
+        </div>
+        <div style="padding-top:14px">
+          <div style="font-family:'Newsreader',serif;font-size:21px;margin-bottom:12px">{{ s.title }}</div>
+          <div style="font-size:14.5px;line-height:1.55;color:#55504A">{{ s.body }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" data-screen-label="Reviews" style="padding:88px 6% 96px;background:#F4EFE8;border-top:1px solid #E4DED6">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px;align-items:end;margin-bottom:56px">
+    <div>
+      <div style="font-size:12px;letter-spacing:0.2em;color:#B3261E;font-weight:600;margin-bottom:18px">CLIENT REVIEWS</div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(38px,3.8vw,54px);line-height:1.05;letter-spacing:-0.015em;margin:0">New beginnings,<br>new homes.</h2>
+    </div>
+    <div style="display:flex;gap:18px;align-items:flex-start;max-width:460px">
+      <svg width="28" height="28" viewBox="0 0 20 20" fill="#B3261E" style="flex:none;margin-top:4px"><path d="M10 17.5 C10 17.5 2 12.5 2 7 A4 4 0 0 1 10 5 A4 4 0 0 1 18 7 C18 12.5 10 17.5 10 17.5 Z"></path></svg>
+      <p style="margin:0;font-family:'Newsreader',serif;font-style:italic;font-size:21px;line-height:1.45;color:#1E1B18;text-wrap:pretty">Nothing makes us happier than seeing our clients receive the keys to their new home and start creating lifelong memories with their families.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px">
+    <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+      <figure style="margin:0;background:#FAF8F5;border:1px solid #E4DED6;border-radius:2px;padding:36px 32px 32px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;gap:3px"><svg width="16" height="16" viewBox="0 0 20 20" fill="#B3261E"><path d="M10 1.5 L12.6 7 L18.5 7.6 L14 11.6 L15.3 17.5 L10 14.5 L4.7 17.5 L6 11.6 L1.5 7.6 L7.4 7 Z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#B3261E"><path d="M10 1.5 L12.6 7 L18.5 7.6 L14 11.6 L15.3 17.5 L10 14.5 L4.7 17.5 L6 11.6 L1.5 7.6 L7.4 7 Z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#B3261E"><path d="M10 1.5 L12.6 7 L18.5 7.6 L14 11.6 L15.3 17.5 L10 14.5 L4.7 17.5 L6 11.6 L1.5 7.6 L7.4 7 Z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#B3261E"><path d="M10 1.5 L12.6 7 L18.5 7.6 L14 11.6 L15.3 17.5 L10 14.5 L4.7 17.5 L6 11.6 L1.5 7.6 L7.4 7 Z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#B3261E"><path d="M10 1.5 L12.6 7 L18.5 7.6 L14 11.6 L15.3 17.5 L10 14.5 L4.7 17.5 L6 11.6 L1.5 7.6 L7.4 7 Z"></path></svg></div>
+        <blockquote style="margin:0;flex:1;display:flex;flex-direction:column;gap:12px">
+          <div style="font-family:'Newsreader',serif;font-size:24px;line-height:1.3;color:#1E1B18;text-wrap:pretty">“{{ r.title }}”</div>
+          <div style="font-size:16px;line-height:1.6;color:#3A3530;text-wrap:pretty">{{ r.quote }}</div>
+          <div style="font-size:15px;font-weight:600;color:#B3261E">{{ r.highlight }}</div>
+        </blockquote>
+        <figcaption style="padding-top:20px;border-top:1px solid #E4DED6;font-size:14px;color:#55504A">Mighty Finance client</figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" data-screen-label="CTA" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));background:#EFE8DF">
+  <div style="min-height:380px;position:relative">
+    <img src="uploads/photos/consultation.webp" alt="Mortgage consultation meeting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block">
+  </div>
+  <div style="padding:64px 6%;display:flex;flex-wrap:wrap;align-items:center;gap:48px">
+    <div style="flex:1 1 300px">
+      <div style="font-size:12px;letter-spacing:0.2em;font-weight:600;margin-bottom:16px;color:#3A3530">GET IN TOUCH TODAY</div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,3.2vw,46px);line-height:1.08;letter-spacing:-0.015em;margin:0 0 30px">Let’s turn your home ownership <span style="color:#B3261E">dream into reality.</span></h2>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:12px;background:#B3261E;color:#fff;padding:17px 28px;border-radius:2px;font-size:16px;font-weight:500" style-hover="background:#8E1C16;color:#fff">Get a Free Consultation <span>→</span></a>
+    </div>
+    <div style="flex:0 1 310px;min-width:0;display:flex;flex-direction:column;gap:22px;padding-left:36px;border-left:1px solid #D6CCBF;font-size:14px;line-height:1.45;color:#3A3530">
+      <div><div style="font-family:'Newsreader',serif;font-size:22px;color:#1E1B18;line-height:1.2">Bernardine Harrison</div><div style="font-size:13px;color:#B3261E;font-weight:500;margin-top:4px">Mortgage Broker</div></div>
+      <a href="tel:+61406881477" style="display:flex;gap:14px;align-items:flex-start;color:#3A3530" style-hover="color:#B3261E"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" style="flex:none"><path d="M4 2 H7.5 L9 6.5 L6.8 8 C7.8 10.2 9.8 12.2 12 13.2 L13.5 11 L18 12.5 V16 C18 17 17 18 16 18 C8.3 18 2 11.7 2 4 C2 3 3 2 4 2 Z"></path></svg><span>0406 881 477</span></a>
+      <a href="mailto:bernardine@mightyfinance.com.au" style="display:flex;gap:14px;align-items:flex-start;color:#3A3530;overflow-wrap:anywhere" style-hover="color:#B3261E"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" style="flex:none"><rect x="2" y="4" width="16" height="12"></rect><path d="M2 5 L10 11 L18 5"></path></svg><span>bernardine@mightyfinance.com.au</span></a>
+      <div style="display:flex;gap:14px;align-items:flex-start"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#3A3530" stroke-width="1.4" style="flex:none"><path d="M10 18 C10 18 4 12 4 8 A6 6 0 0 1 16 8 C16 12 10 18 10 18 Z"></path><circle cx="10" cy="8" r="2"></circle></svg><span>6 Kilda Road,<br>Melbourne VIC, Australia</span></div>
+      <div style="display:flex;gap:14px;align-items:flex-start"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#3A3530" stroke-width="1.4" style="flex:none"><path d="M10 3 C5 3 2 6 2 10 C2 12 3 13.5 4 14.5 L3 18 L7 16.5 C8 17 9 17 10 17 C15 17 18 14 18 10 C18 6 15 3 10 3 Z"></path></svg><span>No obligation<br><span style="white-space:nowrap">Online or in-person</span></span></div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280, y: 0, menu: false };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth, menu: window.innerWidth < 1024 && this.state.menu });
+    this.onScroll = () => this.setState({ y: window.scrollY });
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onResize(); this.onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+  }
+  renderVals() {
+    const { w, y, menu } = this.state;
+    const mobile = w < 768, compactNav = w < 1024, stacked = w < 900, scrolled = y > 40;
+    const solid = scrolled || stacked || menu;
+    return {
+      showDesktopNav: !compactNav, showHamburger: compactNav, showBar: mobile, menuOpen: menu && compactNav,
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      closeMenu: () => this.setState({ menu: false }),
+      headerPad: scrolled ? '12px 6%' : (mobile ? '14px 5%' : '24px 6%'),
+      headerBg: solid ? 'rgba(250,248,245,0.96)' : 'rgba(250,248,245,0)',
+      headerShadow: scrolled && !menu ? '0 4px 24px rgba(30,27,24,0.08)' : 'none',
+      logoH: scrolled ? (mobile ? '40px' : '48px') : (mobile ? '46px' : '64px'),
+      menuTop: scrolled ? (mobile ? '64px' : '72px') : (mobile ? '74px' : '112px'),
+      bar1: menu ? 'translateY(6.5px) rotate(45deg)' : 'none',
+      bar2: menu ? 0 : 1,
+      bar3: menu ? 'translateY(-6.5px) rotate(-45deg)' : 'none',
+      barTransform: menu ? 'translateY(110%)' : 'none',
+      heroMinH: stacked ? '0' : '760px',
+      heroPadTop: stacked ? (mobile ? '74px' : '96px') : '0',
+      heroImgPos: stacked ? 'relative' : 'absolute',
+      heroImgW: stacked ? '100%' : '62%',
+      heroImgH: stacked ? (mobile ? '320px' : '420px') : 'auto',
+      heroGrad: stacked ? 'linear-gradient(180deg,rgba(250,248,245,0) 55%,#FAF8F5 100%)' : 'linear-gradient(90deg,#FAF8F5 0%,rgba(250,248,245,0.85) 14%,rgba(250,248,245,0) 42%)',
+      tagInset: stacked ? '24px' : '48px',
+      tagSize: mobile ? '18px' : '22px',
+      heroContentPad: stacked ? (mobile ? '24px 6% 56px' : '32px 6% 72px') : '190px 6% 80px',
+      stepDivider: mobile ? 'none' : '1px solid #E4DED6',
+      reviews: [
+        { title: 'No more renting.', quote: 'Thank you Bernardine Harrison of Mighty Finance for a smooth transaction.', highlight: 'Highly recommended!' },
+        { title: 'New beginning, new memories, new home.', quote: 'Thank you Lord. Thank you Bernardine Harrison of Mighty Finance.', highlight: '' }
+      ],
+      steps: [
+        { n: '01', title: 'Chat with us', body: 'Tell us about your goals and situation.' },
+        { n: '02', title: 'Explore your options', body: 'We compare loan options from a wide panel of lenders.' },
+        { n: '03', title: 'Submit & manage', body: 'We guide you through the application process.' },
+        { n: '04', title: 'Move forward', body: 'Settle with confidence and support you beyond.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
